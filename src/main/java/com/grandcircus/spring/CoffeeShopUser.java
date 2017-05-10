@@ -9,6 +9,11 @@ public class CoffeeShopUser {
     private String email;
     private String phoneNum;
     private int age;
+    private int password;
+    private int ID;
+    private String coffeeBlend;
+    private String storeLocation;
+    private int confirmPassword;
 
     //step 2. create getters and setters
     public String getName() {
@@ -41,5 +46,45 @@ public class CoffeeShopUser {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getPassword() {
+        return password;
+    }
+
+    public void setPassword(int password) {
+        this.password = password;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getCoffeeBlend() {
+        return coffeeBlend;
+    }
+
+    public void setCoffeeBlend(String coffeeBlend) {
+        this.coffeeBlend = coffeeBlend;
+    }
+
+    public String getStoreLocation() {
+        return storeLocation;
+    }
+
+    public void setStoreLocation(String storeLocation) {
+        this.storeLocation = storeLocation;
+    }
+
+    public int getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(int confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 }
