@@ -8,19 +8,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
 import java.util.ArrayList;
 
-/**
- * Created by trina2 on 5/8/17.
- */
-
-
-@Controller //first: do this annotation, when red, import class.
+@Controller
 public class HomeController {
+
+    private final Dao customersDAO = new Dao();
 
     @RequestMapping("/")
     public ModelAndView welcome() {
@@ -32,7 +30,6 @@ public class HomeController {
         return new ModelAndView("welcome", "result", items);
     }
 
-    //second: do this annotation, and import class again.
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public ModelAndView CoffeeShopUser() {
         return new ModelAndView("registration", "command", new CoffeeShopUser());
@@ -66,6 +63,20 @@ public class HomeController {
         ArrayList<ItemsEntity> itemsList = (ArrayList<ItemsEntity>) c.list();
         return new ModelAndView("welcome2", "items", itemsList);
 
+    }
+
+    @RequestMapping("/addUserToDB")
+    public ModelAndView addUser(@RequestParam("name") String name,
+                                @RequestParam("email") String email,
+                                @RequestParam("age") int age,
+                                @RequestParam("password") String password,
+                                @RequestParam("confirmPassword") String confirmPassword,
+                                @RequestParam("phoneNumber") int phoneNumber,
+                                @RequestParam("favoriteStoreLocation") String favoriteStoreLocation) {
+
+        UsersEntity newUser = customersDAO.addUser(name, email, age, password, confirmPassword, phoneNumber, favoriteStoreLocation);
+
+        return new ModelAndView("addUserToDB", "newUser", newUser);
     }
 
 }
