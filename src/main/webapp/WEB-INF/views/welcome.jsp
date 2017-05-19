@@ -1,11 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: trina2
-  Date: 5/8/17
-  Time: 1:10 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <html>
 <head>
     <title>Coffee Shop Lab</title>
@@ -17,12 +13,27 @@
 </head>
 <body>
 <h2>Welcome to Trina's Coffee Shop!</h2>
-<!--ref to variable name/modelName in HomeController. will bring back "Hello World", our string-->
-${hello}
+<center> <h3>Menu</h3>
+    <table border = "1">
+    <c:forEach items = "${result}" var="list">
+        <tr>
+            <td>
+        <c:out value = "${list.coffeeType}"></c:out>
+        <c:out value = "${list.description}"></c:out>
+        <c:out value = "${list.price}"></c:out>
+            </td>
+        </tr>
+    </c:forEach>
+    </table>
+</center>
+
 <a href="/registration">Click here to register!</a>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>

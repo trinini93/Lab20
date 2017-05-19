@@ -28,6 +28,10 @@
             color: black;
         }
 
+        input[type=select] {
+            color: black;
+        }
+
 
     </style>
 </head>
@@ -39,38 +43,31 @@
     <div class="row">
         <div class="col-md-4">
             <h3>Please fill out the form below to register: </h3>
-            <form:form method="POST" action="/addUser">
+            <form:form name="summary" method="post" action="/addUser" onsubmit="return validateForm()">
             <table align="center"> <!--centering table-->
                 <tr>
-                    <td><form:label path="name">Name</form:label></td>
-                    <td><form:input path="name"/></td>
+                    <td>Name:<input type="text" name="name" required></td> <%--required will prompt user to fill something out (name in this case) that they might've missed--%>
                 </tr>
                 <tr>
-                    <td><form:label path="email">Email</form:label></td>
-                    <td><form:input path="email"/></td>
+                    <td>Email:<input type="text" name="email" required></td>
                 </tr>
                 <tr>
-                    <td><form:label path="age">Age</form:label></td>
-                    <td><form:input path="age"/></td>
+                    <td>Age:<input type="text" name="age" required></td>
                 </tr>
                 <tr>
-                    <td><form:label path="phoneNum">Phone Number</form:label></td>
-                    <td><form:input path="phoneNum"/></td>
+                    <td>Phone Number:<input type="text" name="phoneNum" required></td>
                 </tr>
 
                 <tr>
-                    <td><form:label path="password">Password</form:label></td>
-                    <td><form:password path="password"/></td> <!--change input to 'password' so the pass is masked -->
+                    <td>Password:<input type="password" name="password" required></td>
                 </tr>
 
                 <tr>
-                    <td><form:label path="confirmPassword">Confirm Password</form:label></td>
-                    <td><form:password path="confirmPassword"/></td> <!--change input to 'password' so the pass is masked -->
+                    <td>Confirm Password:<input type="password" name="confirmPassword" required></td>
                 </tr>
 
                 <tr>
-                    <td><form:label path="ID">ID</form:label></td>
-                    <td><form:input path="ID"/></td>
+                    <td>ID:<input type="text" name="ID" required></td>
                 </tr>
             </table>
 
@@ -89,15 +86,12 @@
 
         <div class="col-md-4">
             <h3>Favorite Store Location</h3>
-            <select name="storeLocation"> <form:label path="storeLocation">Favorite Store Location</form:label>
-                <option value="123 Main St.">123 Main St.</option>
-                <option value="456 John R.">456 John R.</option>
-                <option value="789 Woodward St.">789 Woodward St.</option>
-            </select>
+            <input type="radio" name="StoreLocation" value="123 Main St.">123 Main St.<br>
+            <input type="radio" name="StoreLocation" value="456 John R. ">456 John R.<br>
+            <input type="radio" name="StoreLocation" value="789 Woodward.">789 Woodward.<br>
             </br>
         </div>
     </div>
-
 
     <table> <!--reopening table tag for submit button-->
         <tr>
@@ -110,8 +104,38 @@
 
     </form:form>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    <script>
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function validateForm () {
+
+            var phoneNum = document.forms ["summary"] ["phoneNum"].value;
+            var email = document.forms ["summary"] ["email"].value;
+            var name = document.forms ["summary"] ["name"].value;
+            var age = document.forms ["summary"] ["age"].value;
+            var password = document.forms ["summary"] ["password"].value;
+            var confirmPassword = document.forms ["summary"] ["confirmPassword"].value;
+            var ID = document.forms ["summary"] ["ID"].value;
+
+            if (email.length < 2
+                || phoneNum.length < 2
+                || name.length < 2
+                || age.length < 2
+                || password.length < 2
+                || confirmPassword.length < 2
+                || ID.length < 2) {
+                alert("Input must be longer than 2 characters.");
+                return false;
+            }
+
+            if (password != confirmPassword) {
+                alert("Passwords do not match! Please reenter.");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>

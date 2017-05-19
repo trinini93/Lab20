@@ -4,6 +4,14 @@ body {
     color: white;
 }
 
+select{
+    color: black;
+}
+select option { color: black; }
+select option:first-child{
+    color: black;
+}
+
 /*select {*/
     /*color: black;*/
 /*}*/
@@ -16,6 +24,6 @@ body {
     /*background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/gridme.png');*/
 /*}*/
 
-label {
-    color: black;
-}
+/*label {*/
+    /*color: black;*/
+/*}*/

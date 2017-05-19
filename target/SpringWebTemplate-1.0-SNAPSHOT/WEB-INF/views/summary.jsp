@@ -62,7 +62,7 @@
 
     <tr>
         <td>Favorite Store Location</td>
-        <td>${storeLocation}</td>
+        <td>${location}</td>
     </tr>
 </table>
 </body>

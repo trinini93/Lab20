@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.grandcircus.spring.util.UsersEntity" table="Users" schema="CoffeeShopDB">
+        <id name="idUsers">
+            <column name="idUsers" sql-type="varchar(20)" length="20"/>
+        </id>
+        <property name="name">
+            <column name="Name" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="email">
+            <column name="Email" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="age">
+            <column name="Age" sql-type="int(11)"/>
+        </property>
+        <property name="password">
+            <column name="Password" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="confirmPassword">
+            <column name="ConfirmPassword" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="phoneNumber">
+            <column name="PhoneNumber" sql-type="int(11)"/>
+        </property>
+        <property name="favoriteStoreLocation">
+            <column name="FavoriteStoreLocation" sql-type="varchar(45)" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>
