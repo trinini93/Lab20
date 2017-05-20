@@ -43,52 +43,61 @@
     <div class="row">
         <div class="col-md-4">
             <h3>Please fill out the form below to register: </h3>
-            <form:form name="summary" method="post" action="/addUser" onsubmit="return validateForm()">
-            <table align="center"> <!--centering table-->
+            <form:form name="summary" method="post" action="/addUser" onsubmit="return validateForm();">
+
+            <%--<form:form name="summary" method="post" action="/addUser">--%>
+            <table align=""> <!--centering table-->
                 <tr>
-                    <td>Name:<input type="text" name="name" required></td> <%--required will prompt user to fill something out (name in this case) that they might've missed--%>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" required></td><%--required will prompt user to fill something out (name in this case) that they might've missed--%>
                 </tr>
                 <tr>
-                    <td>Email:<input type="text" name="email" required></td>
+                    <td>Email:</td>
+                    <td><input type="text" name="email" required></td>
                 </tr>
                 <tr>
-                    <td>Age:<input type="text" name="age" required></td>
+                    <td>Age:</td>
+                    <td><input type="text" name="age" required></td>
                 </tr>
                 <tr>
-                    <td>Phone Number:<input type="text" name="phoneNum" required></td>
+                    <td>Phone:</td>
+                    <td><input type="text" name="phoneNum" required></td>
                 </tr>
 
                 <tr>
-                    <td>Password:<input type="password" name="password" required></td>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" required></td>
                 </tr>
 
                 <tr>
-                    <td>Confirm Password:<input type="password" name="confirmPassword" required></td>
+                    <td>Confirm PW:</td>
+                    <td><input type="password" name="confirmPassword" required></td>
                 </tr>
 
                 <tr>
-                    <td>ID:<input type="text" name="ID" required></td>
+                    <td>ID:</td>
+                    <td><input type="text" name="ID" required></td>
                 </tr>
             </table>
 
         </div>
 
-        <div class="col-md-4">
-            <h3>Favorite Coffee Blend</h3> <!--dropdown is out of table tag above-->
-            <br>
-            <select name="coffeeBlend"> <form:label path="coffeeBlend">Favorite Coffee Blend</form:label>
-                <option value="Bold Java">Bold Java</option>
-                <option value="So-so Front End">So-so Front End</option>
-                <option value="Lightweight C#">Lightweight C#</option>
-            </select>
-            </br>
-        </div>
+        <%--<div class="col-md-4">--%>
+            <%--<h3>Favorite Coffee Blend</h3> <!--dropdown is out of table tag above-->--%>
+            <%--<br>--%>
+            <%--&lt;%&ndash;<select name="coffeeBlend"> <form:label path="coffeeBlend">Favorite Coffee Blend</form:label>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<option value="Bold Java">Bold Java</option>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<option value="So-so Front End">So-so Front End</option>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<option value="Lightweight C#">Lightweight C#</option>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;</select>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;</br>&ndash;%&gt;--%>
+        <%--</div>--%>
 
         <div class="col-md-4">
-            <h3>Favorite Store Location</h3>
-            <input type="radio" name="StoreLocation" value="123 Main St.">123 Main St.<br>
-            <input type="radio" name="StoreLocation" value="456 John R. ">456 John R.<br>
-            <input type="radio" name="StoreLocation" value="789 Woodward.">789 Woodward.<br>
+            <h3>Favorite Coffee Blend</h3>
+            <input type="radio" name="favoriteCoffeeBlend" value="Bold Java">Bold Java<br>
+            <input type="radio" name="favoriteCoffeeBlend" value="So-so Front End">So-so Front End<br>
+            <input type="radio" name="favoriteCoffeeBlend" value="Lightweight C#">Lightweight C#<br>
             </br>
         </div>
     </div>
@@ -135,6 +144,8 @@
                 alert("Passwords do not match! Please reenter.");
                 return false;
             }
+
+            return true; //return true if passwords match, characters more than 2
         }
     </script>
 </body>

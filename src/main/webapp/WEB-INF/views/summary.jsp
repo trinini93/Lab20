@@ -18,52 +18,50 @@
 <body>
 
 <h2>Summary Page</h2>
-<h3>Thanks for registering! Here is a summary of your registration:</h3>
-<table align="center">
-<tr>
-        <td>Name</td>
-        <td>${name}</td>
-    </tr>
+<h3>Thanks for registering!</h3>
+<h4>You have now been added to our database. Please check your email for a confirmation, and a coupon for a free coffee during your next visit!</h4>
+<%--<table align="center">--%>
+<%--<tr>--%>
+        <%--<td>Name</td>--%>
+        <%--<td>${name}</td>--%>
+    <%--</tr>--%>
 
-    <tr>
-        <td>Email</td>
-        <td>${email}</td>
-    </tr>
+    <%--<tr>--%>
+        <%--<td>Email</td>--%>
+        <%--<td>${email}</td>--%>
+    <%--</tr>--%>
 
-    <tr>
-        <td>Age</td>
-        <td>${age}</td>
-    </tr>
+    <%--<tr>--%>
+        <%--<td>Age</td>--%>
+        <%--<td>${age}</td>--%>
+    <%--</tr>--%>
 
-    <tr>
-        <td>Phone Number</td>
-        <td>${phoneNum}</td>
-    </tr>
+    <%--<tr>--%>
+        <%--<td>Phone Number</td>--%>
+        <%--<td>${phoneNum}</td>--%>
+    <%--</tr>--%>
 
-    <tr>
-        <td>Password</td>
-        <td>${password}</td>
-    </tr>
+    <%--&lt;%&ndash;<tr>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<td>Password</td>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<td>${password}</td>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</tr>&ndash;%&gt;--%>
 
-    <tr>
-        <td>Confirm Password</td>
-        <td>${confirmPassword}</td>
-    </tr>
+    <%--&lt;%&ndash;<tr>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<td>Confirm Password</td>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<td>${confirmPassword}</td>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</tr>&ndash;%&gt;--%>
 
-    <tr>
-        <td>ID</td>
-        <td>${ID}</td>
-    </tr>
+    <%--<tr>--%>
+        <%--<td>ID</td>--%>
+        <%--<td>${ID}</td>--%>
+    <%--</tr>--%>
 
-    <tr>
-        <td>Favorite Coffee Blend</td>
-        <td>${coffeeBlend}</td>
-    </tr>
+    <%--<tr>--%>
+        <%--<td>Favorite Coffee Blend</td>--%>
+        <%--<td>${favoriteCoffeeBlend}</td>--%>
+    <%--</tr>--%>
 
-    <tr>
-        <td>Favorite Store Location</td>
-        <td>${location}</td>
-    </tr>
+
 </table>
 </body>
 

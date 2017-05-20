@@ -27,7 +27,7 @@
     </table>
 </center>
 
-<a href="/registration">Click here to register!</a>
+<a href="/registration">Click to register for specials and coupons!</a>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

@@ -38,8 +38,9 @@
     </key>
     <column id="13" parent="7" name="idUsers">
       <Position>1</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="14" parent="7" name="Name">
       <Position>2</Position>
@@ -71,7 +72,7 @@
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="7" name="FavoriteStoreLocation">
+    <column id="20" parent="7" name="FavoriteCoffeeBlend">
       <Position>8</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>

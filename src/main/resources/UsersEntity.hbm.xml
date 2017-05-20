@@ -6,7 +6,7 @@
 
     <class name="com.grandcircus.spring.util.UsersEntity" table="Users" schema="CoffeeShopDB">
         <id name="idUsers">
-            <column name="idUsers" sql-type="varchar(20)" length="20"/>
+            <column name="idUsers" sql-type="int(11)"/>
         </id>
         <property name="name">
             <column name="Name" sql-type="varchar(45)" length="45"/>
@@ -26,8 +26,8 @@
         <property name="phoneNumber">
             <column name="PhoneNumber" sql-type="int(11)"/>
         </property>
-        <property name="favoriteStoreLocation">
-            <column name="FavoriteStoreLocation" sql-type="varchar(45)" length="45"/>
+        <property name="favoriteCoffeeBlend">
+            <column name="FavoriteCoffeeBlend" sql-type="varchar(45)" length="45"/>
         </property>
     </class>
 </hibernate-mapping>

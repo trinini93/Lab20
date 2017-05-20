@@ -1,14 +1,11 @@
 package com.grandcircus.spring.controller;
 
-
-import com.grandcircus.spring.CoffeeShopUser;
 import com.grandcircus.spring.util.ItemsEntity;
 import com.grandcircus.spring.util.UsersEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
@@ -31,21 +28,24 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public ModelAndView CoffeeShopUser() {
-        return new ModelAndView("registration", "command", new CoffeeShopUser());
+    public ModelAndView UsersEntity() {
+        return new ModelAndView("registration", "command", new UsersEntity());
     }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-    public String addUser(CoffeeShopUser registration, Model model) {
+    public String addUser(UsersEntity registration, Model model) {
         model.addAttribute("name", registration.getName());
         model.addAttribute("email", registration.getEmail());
         model.addAttribute("age", registration.getAge());
-        model.addAttribute("phoneNum", registration.getPhoneNum());
+        model.addAttribute("phoneNum", registration.getPhoneNumber());
         model.addAttribute("password", registration.getPassword());
-        model.addAttribute("ID", registration.getID());
-        model.addAttribute("coffeeBlend", registration.getCoffeeBlend());
-        model.addAttribute("location", registration.getStoreLocation());
+        model.addAttribute("ID", registration.getIdUsers());
+        model.addAttribute("favoriteCoffeeBlend", registration.getFavoriteCoffeeBlend());
         model.addAttribute("confirmPassword", registration.getConfirmPassword());
+
+        Dao dao = new Dao(); //creating an object
+
+        dao.addUser(registration);
 
         return "summary";
 
@@ -63,20 +63,6 @@ public class HomeController {
         ArrayList<ItemsEntity> itemsList = (ArrayList<ItemsEntity>) c.list();
         return new ModelAndView("welcome2", "items", itemsList);
 
-    }
-
-    @RequestMapping("/addUserToDB")
-    public ModelAndView addUser(@RequestParam("name") String name,
-                                @RequestParam("email") String email,
-                                @RequestParam("age") int age,
-                                @RequestParam("password") String password,
-                                @RequestParam("confirmPassword") String confirmPassword,
-                                @RequestParam("phoneNumber") int phoneNumber,
-                                @RequestParam("favoriteStoreLocation") String favoriteStoreLocation) {
-
-        UsersEntity newUser = customersDAO.addUser(name, email, age, password, confirmPassword, phoneNumber, favoriteStoreLocation);
-
-        return new ModelAndView("addUserToDB", "newUser", newUser);
     }
 
 }
