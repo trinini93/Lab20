@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ba97f6-0628-4580-877f-22522c68fee4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/grandcircus/spring/CoffeeShopUser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome2.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringWebTemplate-1.0-SNAPSHOT/WEB-INF/classes/com/grandcircus/spring/CoffeeShopUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/grandcircus/spring/CoffeeShopUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/grandcircus/spring/controller/Dao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/grandcircus/spring/controller/HomeController.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringWebTemplate-1.0-SNAPSHOT/WEB-INF/classes/com/grandcircus/spring/controller/Dao.class" afterPath="$PROJECT_DIR$/target/SpringWebTemplate-1.0-SNAPSHOT/WEB-INF/classes/com/grandcircus/spring/controller/Dao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringWebTemplate-1.0-SNAPSHOT/WEB-INF/classes/com/grandcircus/spring/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/SpringWebTemplate-1.0-SNAPSHOT/WEB-INF/classes/com/grandcircus/spring/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/baea3ea0-8145-4801-b305-b99a56d63122.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/baea3ea0-8145-4801-b305-b99a56d63122.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/grandcircus/spring/controller/Dao.java" afterPath="$PROJECT_DIR$/src/main/java/com/grandcircus/spring/controller/Dao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/grandcircus/spring/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/grandcircus/spring/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/grandcircus/spring/util/UsersEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/grandcircus/spring/util/UsersEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/UsersEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/UsersEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/summary.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/summary.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringWebTemplate-1.0-SNAPSHOT/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/target/SpringWebTemplate-1.0-SNAPSHOT/WEB-INF/views/registration.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +26,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/grandcircus/spring/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-18">
@@ -51,6 +34,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,6 +184,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/summary.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration.jsp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -208,7 +202,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="-46" />
+    <option name="y" value="185" />
     <option name="width" value="1279" />
     <option name="height" value="772" />
   </component>
@@ -901,15 +896,15 @@
       <workItem from="1494356304832" duration="14825000" />
       <workItem from="1494533216165" duration="4633000" />
       <workItem from="1494941268765" duration="5063000" />
-      <workItem from="1494960388560" duration="31512000" />
+      <workItem from="1494960388560" duration="31876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63853000" />
+    <option name="totallyTimeSpent" value="64217000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1279" height="772" extended-state="0" />
+    <frame x="-46" y="185" width="1279" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1005,14 +1000,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1410,6 +1397,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
